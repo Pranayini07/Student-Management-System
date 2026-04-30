@@ -1,0 +1,920 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  background-color: powderblue;
+}
+
+.admission{
+  padding-left: 17%;
+}
+.student{
+  padding-left: 27%;
+}
+.background{
+  background-color: powderblue;
+}
+.labels{
+  width:90%;
+}
+.drop{
+  width:90%;
+  padding: 2px;
+}
+.address{
+  padding-left: 35px;
+}
+.adm input::-webkit-inner-spin-button,
+.adm input::-webkit-outer-spin-button{
+  display: none;
+}
+.space{
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 10%;
+}
+.card{
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+input[type=submit]{
+  background-color: skyblue;
+  border-radius: 5px;
+}
+.head{
+  padding-left: 20%;
+}
+.header{
+  display: flex;
+  background-color: rgba(251,255,255,0.488);
+  height: 20vh;
+  width:100%;
+}
+.header1{
+  display: flex;
+  background-color:rgba(0, 130, 100, 0.488) ;
+  height: 20vh;
+  width: 100%;
+}
+p{
+  text-align: center;
+  font-size: 30px;
+}
+.logo{
+  width: 100px;
+  height: 300px;
+  flex-shrink: 0;
+  background-image: url('./Component/logo1.png');
+  background-repeat: no-repeat;
+  margin-left: 7%;
+}
+.dashboard{
+  /* width: 50cm; */
+  /* height: 100vh; */
+  overflow-y: auto;
+  overflow-x: auto;
+}
+.bgclr{
+  background-color: powderblue;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+.new{
+  background-color: rgb(10, 67, 167);
+}
+.fix{
+  position: fixed;
+}
+.fix1{
+  position: fixed;
+}
+.wrapper {
+  padding: 20px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: skyblue;
+  border-radius: 5px;
+}
+
+.data{
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-bottom: 5%;
+}
+
+.card1 {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding-top: 25px;
+  padding-right: 16px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+  background-color: #fff;
+  width: 13cm;
+}
+
+.login{
+  display: flex;
+  justify-content: right;
+  padding-right: 8%;
+  padding-top: 3%;
+}
+
+
+
+
+
+
+/* css for homepage */
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  height: 90px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  transition: all 0.5s;
+  z-index: 997;
+  background-color: rgba(0, 0, 0, 0.61);
+}
+
+#header.header-scrolled,
+#header.header-inner {
+  background: rgba(6, 12, 34, 0.98);
+  height: 70px;
+}
+
+#header #logo h1 {
+  font-size: 36px;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+#header #logo h1 span {
+  color: #f82249;
+}
+
+#header #logo h1 a,
+#header #logo h1 a:hover {
+  color: #fff;
+}
+
+#header #logo img {
+  padding: 0;
+  margin: 0;
+  max-height: 90px;
+}
+
+@media (max-width: 992px) {
+  #header #logo img {
+    max-height: 80px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation 
+*/
+.navbar {
+  padding: 0;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar>ul>li {
+  white-space: nowrap;
+  padding: 10px 0 10px 12px;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgba(202, 206, 221, 0.8);
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: 0.3s;
+  position: relative;
+  padding: 6px 4px;
+}
+
+.navbar a i,
+.navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar>ul>li>a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -6px;
+  left: 0;
+  background-color: #f82249;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar a:hover:before,
+.navbar li:hover>a:before,
+.navbar .active:before {
+  visibility: visible;
+  width: 100%;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  color: #fff;
+}
+
+.navbar .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 12px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+}
+
+.navbar .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar .dropdown ul a {
+  padding: 10px 20px;
+  font-size: 14px;
+  text-transform: none;
+  color: #060c22;
+}
+
+.navbar .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover>a {
+  color: #f82249;
+}
+
+.navbar .dropdown:hover>ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover>ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+
+@media (max-width: 1366px) {
+  .navbar .dropdown .dropdown ul {
+    left: -90%;
+  }
+
+  .navbar .dropdown .dropdown:hover>ul {
+    left: -100%;
+  }
+}
+
+/**
+* Mobile Navigation 
+*/
+.mobile-nav-toggle {
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+}
+
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+}
+
+.navbar-mobile {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.navbar-mobile .mobile-nav-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.navbar-mobile ul {
+  display: block;
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  padding: 10px 0;
+  background-color: #fff;
+  overflow-y: auto;
+  transition: 0.3s;
+}
+
+.navbar-mobile>ul>li {
+  padding: 0;
+}
+
+.navbar-mobile a:hover:before,
+.navbar-mobile li:hover>a:before,
+.navbar-mobile .active:before {
+  visibility: hidden;
+}
+
+.navbar-mobile a,
+.navbar-mobile a:focus {
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #060c22;
+}
+
+.navbar-mobile a:hover,
+.navbar-mobile .active,
+.navbar-mobile li:hover>a {
+  color: #f82249;
+}
+
+.navbar-mobile .getstarted,
+.navbar-mobile .getstarted:focus {
+  margin: 15px;
+}
+
+.navbar-mobile .dropdown ul {
+  position: static;
+  display: none;
+  margin: 10px 20px;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 1;
+  visibility: visible;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+}
+
+.navbar-mobile .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar-mobile .dropdown ul a {
+  padding: 10px 20px;
+}
+
+.navbar-mobile .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar-mobile .dropdown ul a:hover,
+.navbar-mobile .dropdown ul .active:hover,
+.navbar-mobile .dropdown ul li:hover>a {
+  color: #f82249;
+}
+
+.navbar-mobile .dropdown>.dropdown-active {
+  display: block;
+}
+/*--------------------------------------------------------------
+# Buy Tickets
+--------------------------------------------------------------*/
+.buy-tickets {
+  color: #fff;
+  background: #f82249;
+  padding: 7px 22px;
+  margin: 0 0 0 15px;
+  border-radius: 50px;
+  border: 2px solid #f82249;
+  transition: all ease-in-out 0.3s;
+  font-weight: 500;
+  line-height: 1;
+  font-size: 13px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.buy-tickets:hover {
+  background: none;
+  color: #fff;
+}
+
+.buy-tickets:focus {
+  color: #fff;
+}
+
+@media (max-width: 992px) {
+  .buy-tickets {
+    margin: 0 15px 0 0;
+  }
+}
+
+/* /banner-------------------------------------------------------------------------------------/ */
+/* #banner {
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://res.cloudinary.com/dgrys85u0/image/upload/v1700910604/image_8_ikyn7l.png");
+  background-size: cover;
+  background-position: top center;
+  overflow: hidden;
+  position: relative;
+  background-attachment: fixed;
+} */
+
+
+/* change the image url in css: */
+#banner {
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe61UO5jIDpYfuT3krGdCLdw4m0yIZR5YNiA&usqp=CAU");
+  background-size: cover;
+  background-position: top center;
+  overflow: hidden;
+  position: relative;
+  background-attachment: fixed;
+}
+
+.banner-text {
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  top: 120px;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 15px;
+}
+.banner-text h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 56px;
+  font-weight: 600;
+}
+
+.custom-icon {
+  width: 24px; 
+  height: 24px;
+  fill: #f82249; 
+  width: 94px;
+  height: 94px;
+  margin-top: 50px;
+}
+
+
+#banner::before {
+  content: "";
+  background: rgba(6, 12, 34, 0.8);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/* #banner::before {
+  content: "";
+  background: rgba(35, 34, 34, 0.8);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+} */
+
+.banner-outline-button {
+  font-family: "Raleway", sans-serif;
+  background-color: transparent;
+  width: 160px;
+  height: 40px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #f82249;
+  color: white;
+  border-radius: 25px;
+  margin-top: 20px;
+
+}
+.banner-outline-button:hover {
+  font-family: "Raleway", sans-serif;
+  background-color: #f82249;
+  transition: 1s;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #f44336;
+  color: white;
+  border-radius: 25px;
+  margin-top: 20px;
+}  
+
+
+/* /About------------------------------------------------------------------------------------/ */
+#about {
+  width: 100%;
+  height: 250px;
+  background-image: url("https://www.mymathews.com/media/institute_banner/Andhra_Polytechnic_Kakinada_banner.JPG");
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  background-attachment: fixed;
+  color: #fff;
+  padding: 60px 0 40px 0;
+  }
+#about:before {
+  content: "";
+  background: rgba(13, 20, 41, 0.8);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+} 
+
+.about-text {
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  top: 30px;
+  right: 0;
+  margin-left: 20px;
+}
+
+/* /Speakers-----------------------------------------------------------------------------------/   */
+#facilities {
+  padding: 60px 0 30px 0;
+}
+
+.speaker {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.details {
+  background: rgba(6, 12, 34, 0.76);
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+  right: 0;
+  text-align: center;
+  padding-top: 10px;
+  height: 90px;
+}
+
+.details p{
+  font-size: medium;
+  visibility: hidden;
+}
+
+.about-text p{
+  font-size: medium;
+  text-align:start;
+}
+
+.speaker:hover {
+  cursor: pointer;
+  transition: 1s;
+}
+
+.speaker:hover .details {
+  
+      background: rgba(6, 12, 34, 0.76);
+      position: absolute;
+      left: 0;
+      bottom: -40px;
+      right: 0;
+      text-align: center;
+      padding-top: 10px;
+      height: 200px;
+  }
+
+ .speaker:hover p{
+  visibility: visible;
+ } 
+
+/* /Common Section Css------------------------------------------------------------------------/    */
+ .section-header {
+  margin-bottom: 60px;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.section-header::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 5px;
+  background: #f82249;
+  bottom: 0;
+ left: 47%;
+}
+
+.section-header h1 {
+  font-size: 36px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #9195a2;
+}
+
+.section-with-bg {
+  background-color: #f6f7fd;
+}
+
+
+/* /venue--------------------------------------------------------------------------------------/ */
+
+#venue {
+  padding: 60px 0;
+}
+
+#venue .container-fluid {
+  margin-bottom: 3px;
+}
+
+#venue .venue-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+}
+
+#venue .venue-info {
+  background: url("https://www.mymathews.com/media/institute_banner/Andhra_Polytechnic_Kakinada_banner.JPG") top center no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+#venue .venue-info::before {
+  content: "";
+  background: rgba(13, 20, 41, 0.8);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#venue .venue-info h3 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+}
+
+@media (max-width: 574px) {
+  #venue .venue-info h3 {
+    font-size: 24px;
+  }
+}
+
+#venue .venue-info p {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+#venue .venue-gallery-container {
+  padding-right: 12px;
+}
+
+#venue .venue-gallery {
+  overflow: hidden;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+}
+
+#venue .venue-gallery img {
+  transition: all ease-in-out 0.4s;
+}
+
+#venue .venue-gallery:hover img {
+  transform: scale(1.1);
+}
+
+.wcu-card {
+  text-align: center;
+  background-color: #fff3f3;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e5eaf4;
+  border-radius: 16px;
+  transition: 0.5s;
+  min-height: 223px;
+  max-height: 224px;
+}
+.wcu-card:hover {
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+}
+.wcu-card-image {
+  width: 87px;
+  height: 90px;
+}
+.wcu-card-title {
+  color: #323f4b;
+  font-family: "Roboto";
+  font-size: 22px;
+  font-weight: 500;
+}
+.wcu-card-description {
+  color: #7b8794;
+  font-family: "Roboto";
+  font-size: 16px;
+}
+
+
+.background1{
+  background-image: url('./Component/bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+}
+.num{
+  display: flex;
+  justify-content: space-evenly;
+} 
+.num input{
+  font-size: larger;
+  text-align: center;
+}
+.number{
+  height: 50px;
+  width:15%;
+  border-radius: 5px;
+  border-color: #CFCFCF;
+}
+.num input::-webkit-inner-spin-button,
+.num input::-webkit-outer-spin-button{
+  display: none;
+}
+.forpass{
+  padding-left:67% ;
+  text-decoration: none;
+  color: rgba(255, 0, 0, 0.779);
+}
+
+
+
+/* css for admin home page */
+
+
+.teacher-header {
+  margin-bottom: 60px;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.teacher-header::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 5px;
+  background: #f82249;
+  bottom: 0;
+ left: 47%;
+}
+
+.teacher-header h1 {
+  font-size: 36px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.teacher-header p {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #9195a2;
+}
+
+.navigation-links {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #f82249;
+}
+
+.navbar-bg {
+  background: rgba(6, 12, 34, 0.98);
+  height: 70px;
+}
+
+.description{
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #9195a2;
+}
