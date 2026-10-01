@@ -95,9 +95,8 @@ input[type=submit]{
   height: 20vh;
   width: 100%;
 }
-p{
-  text-align: center;
-  font-size: 30px;
+p {
+  margin-bottom: 0.5rem;
 }
 .logo{
   width: 100px;
@@ -507,77 +506,66 @@ button {
 }
 
 /* /banner-------------------------------------------------------------------------------------/ */
-/* #banner {
-  width: 100%;
-  height: 100vh;
-  background-image: url("https://res.cloudinary.com/dgrys85u0/image/upload/v1700910604/image_8_ikyn7l.png");
-  background-size: cover;
-  background-position: top center;
-  overflow: hidden;
-  position: relative;
-  background-attachment: fixed;
-} */
-
-
-/* change the image url in css: */
 #banner {
   width: 100%;
-  height: 100vh;
+  min-height: 90vh;
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe61UO5jIDpYfuT3krGdCLdw4m0yIZR5YNiA&usqp=CAU");
   background-size: cover;
-  background-position: top center;
-  overflow: hidden;
+  background-position: center;
   position: relative;
   background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 130px 20px 80px 20px;
+}
+
+#banner::before {
+  content: "";
+  background: rgba(6, 12, 34, 0.82);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 
 .banner-text {
-  position:absolute;
-  bottom: 0;
-  left: 0;
-  top: 120px;
-  right: 0;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  position: relative;
+  z-index: 2;
   text-align: center;
-  padding: 0 15px;
+  max-width: 960px;
+  margin: 0 auto;
 }
+
 .banner-text h1 {
   font-family: "Raleway", sans-serif;
-  font-size: 56px;
-  font-weight: 600;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+
+.banner-text img {
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.5));
+  margin: 15px 0;
+}
+
+.banner-text h4 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #e2e8f0;
+  margin-top: 15px;
 }
 
 .custom-icon {
-  width: 24px; 
-  height: 24px;
   fill: #f82249; 
   width: 94px;
   height: 94px;
   margin-top: 50px;
 }
-
-
-#banner::before {
-  content: "";
-  background: rgba(6, 12, 34, 0.8);
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-/* #banner::before {
-  content: "";
-  background: rgba(35, 34, 34, 0.8);
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-} */
 
 .banner-outline-button {
   font-family: "Raleway", sans-serif;
@@ -590,50 +578,73 @@ button {
   color: white;
   border-radius: 25px;
   margin-top: 20px;
-
 }
+
 .banner-outline-button:hover {
   font-family: "Raleway", sans-serif;
   background-color: #f82249;
-  transition: 1s;
+  transition: 0.3s;
   border-width: 2px;
   border-style: solid;
   border-color: #f44336;
   color: white;
-  border-radius: 25px;
-  margin-top: 20px;
-}  
+}
 
+/* /Teacher Portal Section-------------------------------------------------------------------/ */
+#teacher-portal {
+  background: #0f172a;
+  padding: 60px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
 
 /* /About------------------------------------------------------------------------------------/ */
 #about {
   width: 100%;
-  height: 250px;
+  min-height: auto;
   background-image: url("https://www.mymathews.com/media/institute_banner/Andhra_Polytechnic_Kakinada_banner.JPG");
   background-size: cover;
-  overflow: hidden;
+  background-position: center;
   position: relative;
   background-attachment: fixed;
   color: #fff;
-  padding: 60px 0 40px 0;
-  }
+  padding: 80px 0;
+}
+
 #about:before {
   content: "";
-  background: rgba(13, 20, 41, 0.8);
+  background: rgba(13, 20, 41, 0.88);
   position: absolute;
   bottom: 0;
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1;
 } 
 
 .about-text {
-  position:absolute;
-  bottom: 0;
-  left: 0;
-  top: 30px;
-  right: 0;
-  margin-left: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.about-text h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.about-text h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #f82249;
+  margin-bottom: 12px;
+}
+
+.about-text p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #cbd5e1;
+  text-align: left;
 }
 
 /* /Speakers-----------------------------------------------------------------------------------/   */
@@ -918,3 +929,418 @@ button {
   font-weight: 500;
   color: #9195a2;
 }
+
+/* ==========================================================================
+   Modern Professional UI: Teacher's Space & Auth System
+   ========================================================================== */
+
+.auth-page-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgba(6, 12, 34, 0.88), rgba(20, 35, 75, 0.88)),
+              url('./Component/bg.jpg') center/cover no-repeat fixed;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+}
+
+.auth-navbar {
+  background: rgba(6, 12, 34, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 24px;
+}
+
+.auth-nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.auth-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+
+.auth-brand-logo {
+  height: 48px;
+  width: auto;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.auth-brand-text h2 {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.auth-brand-text p {
+  color: #a0aec0;
+  font-size: 12px;
+  margin: 0;
+  text-align: left;
+}
+
+.auth-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.auth-nav-btn {
+  color: #cbd5e0;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.auth-nav-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.auth-card-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 36px 16px;
+}
+
+.auth-modern-card {
+  width: 100%;
+  max-width: 480px;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(16px);
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(255, 255, 255, 0.3);
+  padding: 36px 32px;
+  animation: authFadeIn 0.4s ease-out;
+}
+
+@keyframes authFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.auth-card-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.auth-card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin-bottom: 12px;
+  box-shadow: 0 8px 16px rgba(13, 110, 253, 0.25);
+}
+
+.auth-card-header h2 {
+  color: #1a202c;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+}
+
+.auth-card-header p {
+  color: #718096;
+  font-size: 14px;
+  margin: 0;
+  text-align: center;
+}
+
+/* Demo Credentials Banner */
+.demo-credentials-card {
+  background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%);
+  border: 1px solid #bae6fd;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.demo-credentials-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.demo-badge-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #0369a1;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.quick-fill-btn {
+  background: #0284c7;
+  color: #ffffff;
+  border: none;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.quick-fill-btn:hover {
+  background: #0369a1;
+  transform: translateY(-1px);
+}
+
+.demo-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+  font-size: 13px;
+}
+
+.demo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(186, 230, 253, 0.6);
+}
+
+.demo-label {
+  color: #475569;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.demo-value {
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-weight: 700;
+  color: #0f172a;
+  background: #f1f5f9;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Modern Form Controls */
+.auth-form-group {
+  margin-bottom: 18px;
+}
+
+.auth-form-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 6px;
+}
+
+.auth-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.auth-input-icon {
+  position: absolute;
+  left: 14px;
+  color: #94a3b8;
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.auth-modern-input {
+  width: 100%;
+  padding: 11px 14px 11px 40px;
+  font-size: 14px;
+  color: #1e293b;
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.auth-modern-input:focus {
+  background: #ffffff;
+  border-color: #0284c7;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
+
+.auth-password-toggle {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  transition: color 0.2s;
+}
+
+.auth-password-toggle:hover {
+  color: #334155;
+}
+
+.auth-options {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.auth-forgot-link {
+  color: #0284c7;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.auth-forgot-link:hover {
+  color: #0369a1;
+  text-decoration: underline;
+}
+
+.auth-submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.auth-submit-btn:hover {
+  background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+  box-shadow: 0 6px 16px rgba(2, 132, 199, 0.4);
+  transform: translateY(-1px);
+}
+
+.auth-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Modern OTP Inputs */
+.otp-inputs-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.otp-box {
+  width: 58px;
+  height: 60px;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  color: #0f172a;
+  background: #f8fafc;
+  border: 2px solid #cbd5e1;
+  border-radius: 12px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.otp-box:focus {
+  background: #ffffff;
+  border-color: #0284c7;
+  box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.2);
+  transform: translateY(-2px);
+}
+
+.auth-card-footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.auth-card-footer p {
+  color: #64748b;
+  font-size: 13px;
+  margin: 0;
+}
+
+.auth-card-footer a {
+  color: #0284c7;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-card-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Home Section Teacher Callout */
+.teacher-portal-banner {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  border-radius: 20px;
+  color: #ffffff;
+  padding: 40px 32px;
+  margin: 30px auto;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.teacher-banner-badge {
+  display: inline-block;
+  background: rgba(14, 165, 233, 0.18);
+  border: 1px solid rgba(14, 165, 233, 0.4);
+  color: #38bdf8;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.teacher-credentials-box {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 16px;
+  backdrop-filter: blur(8px);
+}
